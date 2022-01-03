@@ -1,13 +1,17 @@
-local modules = {
-  'core.options',
-  'core.plugins',
-  'core.commands',
-  'core.mappings'
-}
-
-for _, module in ipairs(modules) do
-   local ok, err = pcall(require, module)
-   if not ok then
-      error('Error loading ' .. module .. '\n\n' .. err)
-   end
-end
+require 'afreidz.options'
+require 'afreidz.plugins'
+require 'afreidz.keymaps'
+require 'afreidz.commands'
+require 'afreidz.plugins.lsp'
+require 'afreidz.plugins.cmp'
+require 'afreidz.colorscheme'
+require 'afreidz.plugins.git'
+require 'afreidz.plugins.indent'
+require 'afreidz.plugins.lualine'
+require 'afreidz.plugins.nvimtree'
+require 'afreidz.plugins.whichkey'
+require 'afreidz.plugins.telescope'
+require 'afreidz.plugins.impatient'
+require 'afreidz.plugins.autopairs'
+require 'afreidz.plugins.treesitter'
+require 'afreidz.plugins.bufferline'
