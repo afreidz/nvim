@@ -1,2 +1,4 @@
 .DS_Store
 plugin/packer_compiled.lua
+node_modules
+package*.json

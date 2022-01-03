@@ -1,33 +1,44 @@
 local g = vim.g
-
+g.nvim_tree_git_hl = 0
+g.nvim_tree_add_trailing = 0
+g.nvim_tree_quit_on_open = 0
+g.nvim_tree_indent_markers = 1
+g.nvim_tree_highlight_opened_files = 0
+g.nvim_tree_root_folder_modifier = ':'
+g.nvim_tree_root_folder_modifier = table.concat { ':t:gs?$?/..', string.rep(' ', 1000), '?:gs?^??' }
+g.nvim_tree_window_picker_exclude = {
+  filetype = { 'notify', 'packer', 'qf' },
+  buftype = { 'terminal' },
+}
+g.nvim_tree_show_icons = {
+  folders = 1,
+  files = 1,
+  git = 0,
+}
 g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
+  default = '',
+  symlink = '',
   git = {
-    unstaged = "",
-    staged = "S",
-    unmerged = "",
-    renamed = "➜",
-    deleted = "",
-    untracked = "U",
-    ignored = "◌",
+    deleted = '',
+    ignored = '◌',
+    renamed = '➜',
+    staged = '✓',
+    unmerged = '',
+    unstaged = '✗',
+    untracked = '★',
   },
   folder = {
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
+    default = '',
+    empty = '',
+    empty_open = '',
+    open = '',
+    symlink = '',
+    symlink_open = '',
   },
 }
 
 local present, nvim_tree = pcall(require, "nvim-tree")
 if not present then return end
-
-local config_present, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_present then return end
-
-local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
   disable_netrw = true,
@@ -64,10 +75,6 @@ nvim_tree.setup {
     cmd = nil,
     args = {},
   },
-  filters = {
-    dotfiles = true,
-    custom = {},
-  },
   git = {
     enable = true,
     ignore = false,
@@ -75,18 +82,9 @@ nvim_tree.setup {
   },
   view = {
     width = 30,
-    height = 30,
     hide_root_folder = true,
     side = "left",
     auto_resize = true,
-    mappings = {
-      custom_only = false,
-      list = {
-        { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
-        { key = "h", cb = tree_cb "close_node" },
-        { key = "v", cb = tree_cb "vsplit" },
-      },
-    },
     number = false,
     relativenumber = false,
   },
@@ -96,13 +94,5 @@ nvim_tree.setup {
   },
   quit_on_open = 0,
   git_hl = 1,
-  disable_window_picker = 0,
-  root_folder_modifier = ":t",
-  show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows = 0,
-    tree_width = 30,
-  },
+  disable_window_picker = 1,
 }
