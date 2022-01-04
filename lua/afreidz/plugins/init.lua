@@ -74,6 +74,20 @@ return packer.startup(function(use)
   -- Git
   use 'airblade/vim-gitgutter'
 
+  -- Zen
+  use {
+    "folke/zen-mode.nvim",
+    config = function()
+      require("zen-mode").setup {}
+    end
+  }
+  use {
+    "folke/twilight.nvim",
+    config = function()
+      require("twilight").setup {}
+    end
+  }
+
   if bootstrap then
     require('packer').sync()
   end

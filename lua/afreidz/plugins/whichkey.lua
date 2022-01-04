@@ -176,6 +176,7 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+  z = { "<cmd>ZenMode<cr>", "Toggle Zen Mode"},
 }
 
 which_key.setup(setup)

@@ -1,6 +1,10 @@
 local cmd = vim.cmd
 
 cmd [[
-  autocmd VimEnter * NvimTreeOpen
+  try
+    autocmd VimEnter * NvimTreeOpen
+  catch 
+
+  endtry
 ]]
 
