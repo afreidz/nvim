@@ -62,7 +62,7 @@ end
 
 local cat = require('lualine.themes.catppuccin')
 local colors = require('catppuccin.api.colors').get_colors()
-cat.normal.c.bg = colors.black2
+cat.normal.c.bg = '#252530'
 
 
 lualine.setup({
