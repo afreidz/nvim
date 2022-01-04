@@ -35,7 +35,17 @@ local kind_icons = {
   TypeParameter = "",
 }
 
+local snp_present, luasnip = pcall(require, 'luasnip')
+if not snp_present then return end
+
+require('luasnip.loaders.from_vscode').lazy_load()  
+
 cmp.setup {
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(),
