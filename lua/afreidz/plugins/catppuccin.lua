@@ -1,4 +1,3 @@
-print('test')
 local present, cat = pcall(require, 'catppuccin')
 if not present then return end
 
