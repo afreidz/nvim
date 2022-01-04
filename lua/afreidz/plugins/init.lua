@@ -47,8 +47,8 @@ return packer.startup(function(use)
   use 'folke/which-key.nvim'
 
   -- Colorschemes
-  use 'lunarvim/colorschemes' 
   use 'lunarvim/darkplus.nvim'
+  use { 'catppuccin/nvim', as = 'catppuccin' }
 
   -- Completion
   use 'hrsh7th/nvim-cmp' 

@@ -60,10 +60,15 @@ local spaces = function()
 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
+local cat = require('lualine.themes.catppuccin')
+local colors = require('catppuccin.api.colors').get_colors()
+cat.normal.c.bg = colors.black2
+
+
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "auto",
+		theme = cat,
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },

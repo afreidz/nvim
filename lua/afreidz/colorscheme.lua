@@ -2,7 +2,7 @@ local cmd = vim.cmd
 
 cmd [[
   try
-    colorscheme onedarker
+    colorscheme catppuccin
   catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme default
     set background=dark
