@@ -61,21 +61,24 @@ local opts = {
 }
 
 local mappings = {
-  ["b"] = {
-    "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Buffers",
+  w = { "<cmd>w!<cr>", "Save Buffer" },
+  q = { "<cmd>q!<cr>", "Quit" },
+  c = { "<cmd>Bdelete!<cr>", "Close Buffer" },
+  h = { "<cmd>nohlsearch<cr>", "Clear Highlight" },
+  s = { "<cmd>SaveSession<cr>", "Save Session" },
+  z = { "<cmd>ZenMode<cr>", "Zen Mode"},
+  e = {
+    name = "File Explorer",
+    e = { "<cmd>NvimTreeToggle<cr>", "Open"},
+    f = { "<cmd>NvimTreeFocus<cr>", "Focus" },
   },
-  ["e"] = { "<cmd>NvimTreeFocus<cr>", "Explorer" },
-  ["w"] = { "<cmd>w!<CR>", "Save" },
-  ["q"] = { "<cmd>q!<CR>", "Quit" },
-  ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-  ["h"] = { "<cmd>nohlsearch<CR>", "Clear Highlight" },
-  ["f"] = {
-    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Find files",
+  f = {
+    name = "Find",
+    b = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Buffers" },
+    f = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Files" },
+    s = { "<cmd>lua require('session-lens').search_session()", "Sessions"},
+    t = { "<cmd>Telescope live_grep theme=ivy<cr>", "Text" },
   },
-  ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
-
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -84,7 +87,6 @@ local mappings = {
     S = { "<cmd>PackerStatus<cr>", "Status" },
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
-
   g = {
     name = "Git",
     g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
@@ -107,7 +109,6 @@ local mappings = {
       "Diff",
     },
   },
-
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
@@ -139,8 +140,8 @@ local mappings = {
       "Workspace Symbols",
     },
   },
-  s = {
-    name = "Search",
+  S = {
+    name = "Misc. Search",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
@@ -161,7 +162,6 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
-  z = { "<cmd>ZenMode<cr>", "Zen Mode"},
 }
 
 which_key.setup(setup)

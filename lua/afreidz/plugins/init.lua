@@ -92,6 +92,13 @@ return packer.startup(function(use)
     end
   }
 
+  -- Startup and Session
+  use "rmagatti/auto-session"
+  use {
+    "rmagatti/session-lens",
+    requires = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
+  }
+
   if bootstrap then
     require('packer').sync()
   end
