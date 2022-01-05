@@ -93,10 +93,10 @@ return packer.startup(function(use)
   }
 
   -- Startup and Session
-  use "rmagatti/auto-session"
+  use "goolord/alpha-nvim"
   use {
-    "rmagatti/session-lens",
-    requires = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
+    "Shatur/neovim-session-manager",
+    requires = { "nvim-telescope/telescope.nvim" },
   }
 
   if bootstrap then

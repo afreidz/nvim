@@ -34,9 +34,9 @@ local options = {
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
-  sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 }
 
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 vim.opt.shortmess:append "c"
 
 for k, v in pairs(options) do

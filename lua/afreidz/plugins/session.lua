@@ -1,16 +1,14 @@
-local present, session = pcall(require, 'auto-session')
-if not present then return end
+local smgr_present, ssm = pcall(require, 'session_manager')
+if not smgr_present then return end
 
-session.setup({
-  auto_save_endable = false,
-  auto_restore_enabled = true,
+ssm.setup({
+  autoload_mode = "Disabled",
+  autosave_last_session = true,
+  autosave_ignore_not_normal = true,
+  autosave_only_in_session = false,
 })
 
-local lens_present, lens = pcall(require, 'session-lens')
-if not lens_present then return end
+local tele_present, telescope = pcall(require, 'telescope')
+if not tele_present then return end
 
-lens.setup({
-  prompt_title = 'Neovim Sessions',
-  theme_conf = { border = true },
-  previewer = true,
-})
+telescope.load_extension('sessions')

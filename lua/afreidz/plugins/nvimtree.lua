@@ -1,98 +1,58 @@
-local g = vim.g
-g.nvim_tree_git_hl = 0
-g.nvim_tree_add_trailing = 0
-g.nvim_tree_quit_on_open = 0
-g.nvim_tree_indent_markers = 1
-g.nvim_tree_highlight_opened_files = 0
-g.nvim_tree_root_folder_modifier = ':'
-g.nvim_tree_root_folder_modifier = table.concat { ':t:gs?$?/..', string.rep(' ', 1000), '?:gs?^??' }
-g.nvim_tree_window_picker_exclude = {
-  filetype = { 'notify', 'packer', 'qf' },
-  buftype = { 'terminal' },
-}
-g.nvim_tree_show_icons = {
-  folders = 1,
-  files = 1,
-  git = 0,
-}
-g.nvim_tree_icons = {
-  default = '',
-  symlink = '',
-  git = {
-    deleted = '',
-    ignored = '◌',
-    renamed = '➜',
-    staged = '✓',
-    unmerged = '',
-    unstaged = '✗',
-    untracked = '★',
-  },
-  folder = {
-    default = '',
-    empty = '',
-    empty_open = '',
-    open = '',
-    symlink = '',
-    symlink_open = '',
-  },
-}
-
-local present, nvim_tree = pcall(require, "nvim-tree")
+local present, tree = pcall(require, "nvim-tree")
 if not present then return end
 
-nvim_tree.setup {
-  disable_netrw = true,
-  hijack_netrw = true,
-  open_on_setup = false,
-  ignore_ft_on_setup = {
-    "startify",
-    "dashboard",
-    "alpha",
-  },
-  auto_close = true,
-  open_on_tab = false,
-  hijack_cursor = false,
-  update_cwd = true,
-  update_to_buf_dir = {
-    enable = true,
-    auto_open = true,
-  },
-  diagnostics = {
-    enable = true,
-    icons = {
-      hint = "",
-      info = "",
-      warning = "",
-      error = "",
-    },
-  },
-  update_focused_file = {
-    enable = true,
-    update_cwd = true,
-    ignore_list = {},
-  },
-  system_open = {
-    cmd = nil,
-    args = {},
-  },
+local cb = require("nvim-tree.config").nvim_tree_callback
+local icons = {
+  default = "",
+  symlink = "",
   git = {
-    enable = true,
-    ignore = false,
-    timeout = 500,
+    unstaged = "",
+    staged = "S",
+    unmerged = "",
+    renamed = "➜",
+    deleted = "",
+    untracked = "U",
+    ignored = "◌",
   },
-  view = {
-    width = 30,
-    hide_root_folder = true,
-    side = "left",
-    auto_resize = true,
-    number = false,
-    relativenumber = false,
+  folder = {
+    default = "",
+    open = "",
+    empty = "",
+    empty_open = "",
+    symlink = "",
   },
-  trash = {
-    cmd = "trash",
-    require_confirm = true,
-  },
-  quit_on_open = 0,
-  git_hl = 1,
-  disable_window_picker = 1,
+}
+
+local mappings = {
+  { key = "d", cb = cb("trash") },
+  { key = "q", cb = cb("close") },
+  { key = "R", cb = cb("rename") },
+  { key = "c", cb = cb("create") },
+  { key = "r", cb = cb("refresh") },
+  { key = ".", cb = cb("dir_up") },
+  { key = "y", cb = cb("copy_path") },
+  { key = "yn", cb = cb("copy_name") },
+  { key = "<bs>", cb = cb("close_node") },
+  { key = "h", cb = cb("toggle_ignored") },
+  { key = "h", cb = cb("toggle_dotfiles") },
+  { key = "yy", cb = cb("copy_absolute_path") },
+  { key = { "<cr>", "<2-LeftMouse>"}, cb = cb("edit") },
+}
+
+local g = vim.g
+g.nvim_tree_git_hl = 1
+g.nvim_tree_icons = icons
+g.nvim_tree_indent_markers = 1
+g.nvim_tree_disable_window_picker = 1
+g.nvim_tree_highlight_opened_files = 1
+g.nvim_tree_show_icons = { folder_arrows = 0 }
+
+tree.setup {
+  update_cwd = true,
+  auto_close = true,
+  disable_netrw = true,
+  hijack_cursor = true,
+  git = { enable = true, ignore = true, },
+  update_focused_file = { enable = true, update_cwd = true, },
+  view = { hide_root_folder = true, mappings = { custom_only = true, list = mappings } },
 }
