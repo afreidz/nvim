@@ -4,10 +4,7 @@ if not present then return end
 configs.setup {
   ensure_installed = "maintained",
   sync_install = false,
-  ignore_install = { "" },
-  autopairs = {
-    enable = true,
-  },
+  autopairs = { enable = true },
   highlight = {
     enable = true,
     disable = { "" },

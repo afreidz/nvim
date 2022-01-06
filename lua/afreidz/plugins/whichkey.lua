@@ -89,25 +89,9 @@ local leader_mappings = {
   },
   g = {
     name = "Git",
-    g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
-    j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
-    k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
-    l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
-    p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
-    r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
-    R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-    s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
-    u = {
-      "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
-      "Undo Stage Hunk",
-    },
     o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-    d = {
-      "<cmd>Gitsigns diffthis HEAD<cr>",
-      "Diff",
-    },
   },
   l = {
     name = "LSP",
@@ -161,8 +145,12 @@ local leader_mappings = {
 }
 
 local motion_mappings = {
-  ["c-Left"] = {"", "Move to previous buffer" },
-  ["c-Right"] = {"", "Move to next buffer" },
+  ["<c-Right>"] = {"<C-w>l", "Move to next buffer" },
+  ["<c-Left>"] = {"<C-w>h", "Move to previous buffer" },
+  ["<c-Up>"] = {"<Esc>:m .-2<CR>==gi", "Move line up" },
+  ["<c-Down>"] = {"<Esc>:m .+1<CR>==gi", "Move line down" },
+  ['<a-tab>'] = {"<cmd>BufferLineCycleNext<cr>", "Move to the next tab" },
+  ['<a-s-tab>'] = {"<cmd>BufferLineCyclePrev<cr>", "Move to the previous tab" },
 }
 
 local motion_opts = {
