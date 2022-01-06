@@ -19,6 +19,7 @@ cat.remap({
   DiagnosticUnderlineHint = { gui = "undercurl" },
   DiagnosticUnderlineError = { gui = "undercurl" },
   LspDiagnosticsDefaultHint = { fg = colors.peach },
+  Folded = { bg = colors.black2, fg = colors.black4 },
   IndentBlanklineContextChar = { fg = colors.black4 },
 })
 

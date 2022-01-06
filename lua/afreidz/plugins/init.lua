@@ -92,6 +92,9 @@ return packer.startup(function(use)
     end
   }
 
+  -- Folds
+  use "anuvyklack/pretty-fold.nvim"
+
   -- Startup and Session
   use "goolord/alpha-nvim"
   use {

@@ -51,7 +51,7 @@ local setup = {
   },
 }
 
-local opts = {
+local leader_opts = {
   mode = "n", 
   prefix = "<leader>",
   buffer = nil, 
@@ -60,7 +60,7 @@ local opts = {
   nowait = true, 
 }
 
-local mappings = {
+local leader_mappings = {
   w = { "<cmd>w!<cr>", "Save Buffer" },
   q = { "<cmd>q<cr>", "Quit" },
   c = { "<cmd>Bdelete!<cr>", "Close Buffer" },
@@ -160,5 +160,19 @@ local mappings = {
   },
 }
 
+local motion_mappings = {
+  ["c-Left"] = {"", "Move to previous buffer" },
+  ["c-Right"] = {"", "Move to next buffer" },
+}
+
+local motion_opts = {
+  mode = "n", 
+  buffer = nil, 
+  silent = true, 
+  noremap = true, 
+  nowait = true, 
+}
+
 which_key.setup(setup)
-which_key.register(mappings, opts)
+which_key.register(leader_mappings, leader_opts)
+which_key.register(motion_mappings, motion_opts)
