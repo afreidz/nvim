@@ -2,8 +2,8 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+vim.g.mapleader = " "
 
 -- Move text up and down (visual mode)
 keymap("v", "<c-Down>", ":m '>+1<CR>gv=gv", opts)

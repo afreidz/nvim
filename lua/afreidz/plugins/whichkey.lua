@@ -147,8 +147,8 @@ local leader_mappings = {
 local motion_mappings = {
   ["<c-Right>"] = {"<C-w>l", "Move to next buffer" },
   ["<c-Left>"] = {"<C-w>h", "Move to previous buffer" },
-  ["<c-Up>"] = {"<Esc>:m .-2<CR>==gi", "Move line up" },
-  ["<c-Down>"] = {"<Esc>:m .+1<CR>==gi", "Move line down" },
+  ["<c-Up>"] = {"<Esc>:m .-2<CR>==gn", "Move line up" },
+  ["<c-Down>"] = {"<Esc>:m .+1<CR>==gn", "Move line down" },
   ['<a-tab>'] = {"<cmd>BufferLineCycleNext<cr>", "Move to the next tab" },
   ['<a-s-tab>'] = {"<cmd>BufferLineCyclePrev<cr>", "Move to the previous tab" },
 }
