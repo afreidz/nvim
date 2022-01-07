@@ -65,6 +65,7 @@ return packer.startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
   use 'jose-elias-alvarez/null-ls.nvim'
+  use 'simrat39/symbols-outline.nvim'
 
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
