@@ -145,6 +145,8 @@ local leader_mappings = {
 }
 
 local motion_mappings = {
+  ['>'] = {"<cmd>><cr>", "Indent line" },
+  ['<'] = {"<cmd><<cr>", "Unindent line" },
   ["<c-Right>"] = {"<C-w>l", "Move to next buffer" },
   ["<c-Left>"] = {"<C-w>h", "Move to previous buffer" },
   ["<c-Up>"] = {"<Esc>:m .-2<CR>==gn", "Move line up" },
