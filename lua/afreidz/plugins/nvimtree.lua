@@ -52,7 +52,8 @@ tree.setup {
   auto_close = true,
   disable_netrw = true,
   hijack_cursor = true,
-  git = { enable = true, ignore = true, },
+  diagnostics = { enable = false },
+  git = { enable = false, ignore = true, },
   update_focused_file = { enable = true, update_cwd = true, },
   view = { hide_root_folder = true, mappings = { custom_only = true, list = mappings } },
 }

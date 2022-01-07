@@ -152,6 +152,8 @@ local motion_mappings = {
   ["<c-Up>"] = {"<Esc>:m .-2<CR>==gn", "Move line up" },
   ["<c-Down>"] = {"<Esc>:m .+1<CR>==gn", "Move line down" },
   ['<a-tab>'] = {"<cmd>BufferLineCycleNext<cr>", "Move to the next tab" },
+  ['<a-Left>'] = {"<cmd>vertical resize -2<cr>", "Resize vertical split" },
+  ['<a-Right>'] = {"<cmd>vertical resize +2<cr>", "Resize vertical split" },
   ['<a-s-tab>'] = {"<cmd>BufferLineCyclePrev<cr>", "Move to the previous tab" },
 }
 

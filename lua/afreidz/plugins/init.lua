@@ -103,6 +103,9 @@ return packer.startup(function(use)
     requires = { "nvim-telescope/telescope.nvim" },
   }
 
+  -- Scrollbar
+  use "petertriho/nvim-scrollbar"
+
   if bootstrap then
     require('packer').sync()
   end

@@ -15,7 +15,6 @@ keymap("i", "<c-Up>", "<Esc>:m .-2<CR>==gi", opts)
 keymap("i", "<c-k>", "<Esc>:m .-2<CR>==gi", opts)
 keymap("i", "<c-Down>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("i", "<c-j>", "<Esc>:m .+1<CR>==gi", opts)
-
 -- Indent
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
