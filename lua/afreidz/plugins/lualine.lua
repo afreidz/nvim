@@ -29,59 +29,60 @@ end
 
 local theme = {} 
 local colors = require('catppuccin.api.colors').get_colors()
+local overrides = require('afreidz.colors')
 
 theme.normal = {
-  a = { bg = colors.black2, fg = colors.blue, gui = "italic" },
-  b = { bg = colors.black2, fg = colors.blue },
-  c = { bg = colors.black2, fg = colors.blue },
-  x = { bg = colors.black2, fg = colors.black4 },
-  y = { bg = colors.black2, fg = colors.black4 },
-  z = { bg = colors.black2, fg = colors.black4 },
+  a = { bg = overrides.black, fg = colors.blue, gui = "italic" },
+  b = { bg = overrides.black, fg = colors.blue },
+  c = { bg = overrides.black, fg = colors.blue },
+  x = { bg = overrides.black, fg = colors.black4 },
+  y = { bg = overrides.black, fg = colors.black4 },
+  z = { bg = overrides.black, fg = colors.black4 },
 }
 
 theme.insert = {
-  a = { bg = colors.black2, fg = colors.teal, gui = "italic" },
-  b = { bg = colors.black2, fg = colors.teal },
-  c = { bg = colors.black2, fg = colors.teal },
-  x = { bg = colors.black2, fg = colors.black4 },
-  y = { bg = colors.black2, fg = colors.black4 },
-  z = { bg = colors.black2, fg = colors.black4 },
+  a = { bg = overrides.black, fg = colors.teal, gui = "italic" },
+  b = { bg = overrides.black, fg = colors.teal },
+  c = { bg = overrides.black, fg = colors.teal },
+  x = { bg = overrides.black, fg = colors.black4 },
+  y = { bg = overrides.black, fg = colors.black4 },
+  z = { bg = overrides.black, fg = colors.black4 },
 }
 
 theme.command = {
-  a = { bg = colors.black2, fg = colors.peach, gui = "italic" },
-  b = { bg = colors.black2, fg = colors.peach },
-  c = { bg = colors.black2, fg = colors.peach },
-  x = { bg = colors.black2, fg = colors.black4 },
-  y = { bg = colors.black2, fg = colors.black4 },
-  z = { bg = colors.black2, fg = colors.black4 },
+  a = { bg = overrides.black, fg = colors.peach, gui = "italic" },
+  b = { bg = overrides.black, fg = colors.peach },
+  c = { bg = overrides.black, fg = colors.peach },
+  x = { bg = overrides.black, fg = colors.black4 },
+  y = { bg = overrides.black, fg = colors.black4 },
+  z = { bg = overrides.black, fg = colors.black4 },
 }
 
 theme.visual = {
-  a = { bg = colors.black2, fg = colors.magenta, gui = "italic" },
-  b = { bg = colors.black2, fg = colors.magenta },
-  c = { bg = colors.black2, fg = colors.magenta },
-  x = { bg = colors.black2, fg = colors.black4 },
-  y = { bg = colors.black2, fg = colors.black4 },
-  z = { bg = colors.black2, fg = colors.black4 },
+  a = { bg = overrides.black, fg = colors.magenta, gui = "italic" },
+  b = { bg = overrides.black, fg = colors.magenta },
+  c = { bg = overrides.black, fg = colors.magenta },
+  x = { bg = overrides.black, fg = colors.black4 },
+  y = { bg = overrides.black, fg = colors.black4 },
+  z = { bg = overrides.black, fg = colors.black4 },
 }
 
 theme.replace = {
-  a = { bg = colors.black2, fg = colors.red, gui = "italic" },
-  b = { bg = colors.black2, fg = colors.red },
-  c = { bg = colors.black2, fg = colors.red },
-  x = { bg = colors.black2, fg = colors.black4 },
-  y = { bg = colors.black2, fg = colors.black4 },
-  z = { bg = colors.black2, fg = colors.black4 },
+  a = { bg = overrides.black, fg = colors.red, gui = "italic" },
+  b = { bg = overrides.black, fg = colors.red },
+  c = { bg = overrides.black, fg = colors.red },
+  x = { bg = overrides.black, fg = colors.black4 },
+  y = { bg = overrides.black, fg = colors.black4 },
+  z = { bg = overrides.black, fg = colors.black4 },
 }
 
 theme.inactive = {
-  a = { bg = colors.black2, fg = colors.black4, gui = "italic" },
-  b = { bg = colors.black2, fg = colors.black4 },
-  c = { bg = colors.black2, fg = colors.black4 },
-  x = { bg = colors.black2, fg = colors.black4 },
-  y = { bg = colors.black2, fg = colors.black4 },
-  z = { bg = colors.black2, fg = colors.black4 },
+  a = { bg = overrides.black, fg = colors.black4, gui = "italic" },
+  b = { bg = overrides.black, fg = colors.black4 },
+  c = { bg = overrides.black, fg = colors.black4 },
+  x = { bg = overrides.black, fg = colors.black4 },
+  y = { bg = overrides.black, fg = colors.black4 },
+  z = { bg = overrides.black, fg = colors.black4 },
 }
 
 

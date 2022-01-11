@@ -12,9 +12,10 @@ local marks = {
 }
 
 local theme_present, theme = pcall(require, "catppuccin.api.colors")
+local overrides = require('afreidz.colors')
 if present then 
   local colors = theme.get_colors()
-  handle.color = '#252530'
+  handle.color = overrides.gray
   marks.Hint.color = colors.sky
   marks.Info.color = colors.teal
   marks.Error.color = colors.red

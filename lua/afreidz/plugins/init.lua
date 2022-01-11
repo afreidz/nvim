@@ -36,19 +36,21 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim' 
   use 'nvim-lua/plenary.nvim' 
   use 'windwp/nvim-autopairs' 
-  use 'nvim-lualine/lualine.nvim'
-  use 'kyazdani42/nvim-web-devicons'
-  use 'kyazdani42/nvim-tree.lua'
-  use 'akinsho/bufferline.nvim'
   use 'moll/vim-bbye'
   use 'akinsho/toggleterm.nvim'
   use 'lewis6991/impatient.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'folke/which-key.nvim'
 
-  -- Colorschemes
+  -- Color schemes
   use 'lunarvim/darkplus.nvim'
   use { 'catppuccin/nvim', as = 'catppuccin' }
+
+  -- Tab/Status/Tree
+  use 'akinsho/bufferline.nvim'
+  use 'kyazdani42/nvim-tree.lua'
+  use 'nvim-lualine/lualine.nvim'
+  use 'kyazdani42/nvim-web-devicons'
 
   -- Completion
   use 'hrsh7th/nvim-cmp' 
@@ -82,15 +84,11 @@ return packer.startup(function(use)
   -- Zen
   use {
     "folke/zen-mode.nvim",
-    config = function()
-      require("zen-mode").setup {}
-    end
+    config = function() require("zen-mode").setup {} end
   }
   use {
     "folke/twilight.nvim",
-    config = function()
-      require("twilight").setup {}
-    end
+    config = function() require("twilight").setup {} end
   }
 
   -- Folds

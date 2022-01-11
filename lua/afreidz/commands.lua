@@ -1,6 +1,11 @@
 local cmd = vim.cmd
+local overrides = require('afreidz.colors')
+local colors = require('catppuccin.api.colors').get_colors()
 
--- This is set in the catppucin.lua, but sometimes it gets overriden ¯\_(ツ)_/¯
-cmd [[
-  hi NvimTreeStatusLineNC guibg=#252530
-]]
+cmd ('colorscheme catppuccin')
+cmd ('hi BufferOffset guibg='..overrides.gray)
+cmd ('hi BufferTabpageFill guibg='..overrides.gray)
+cmd ('hi BufferInactiveSign guifg='..colors.black4)
+cmd ('hi NvimTreeStatusLineNC guibg='..overrides.gray)
+cmd ('hi BufferInactive guibg='..overrides.gray..' guifg='..colors.black4)
+cmd ('hi BufferVisible guibg='..overrides.gray)
