@@ -53,6 +53,6 @@ tree.setup {
   hijack_cursor = true,
   diagnostics = { enable = true },
   git = { enable = true, ignore = false, },
-  update_focused_file = { enable = true, update_cwd = true, },
+  update_focused_file = { enable = false, update_cwd = false, },
   view = { hide_root_folder = true, mappings = { custom_only = true, list = mappings } },
 }
