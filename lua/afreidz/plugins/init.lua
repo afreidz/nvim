@@ -43,6 +43,7 @@ return packer.startup(function(use)
   use 'folke/which-key.nvim'
 
   -- Color schemes
+  use 'afreidz/colors.nvim'
   use 'lunarvim/darkplus.nvim'
   use { 'catppuccin/nvim', as = 'catppuccin' }
 
@@ -71,6 +72,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-ui-select.nvim'
 
   -- Treesitter
   use {

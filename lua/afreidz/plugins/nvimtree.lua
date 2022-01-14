@@ -22,8 +22,8 @@ local g = vim.g
 g.nvim_tree_icons = icons
 g.nvim_tree_indent_markers = 1
 g.nvim_tree_disable_window_picker = 1
-g.nvim_tree_highlight_opened_files = 1
-g.nvim_tree_show_icons = { git = 1, folder_arrows = 0, folders = 1, files = 1 }
+g.nvim_tree_highlight_opened_files = 2
+g.nvim_tree_show_icons = { git = 1, folder_arrows = 1, folders = 1, files = 1 }
 
 local present, tree = pcall(require, "nvim-tree")
 if not present then return end
@@ -54,5 +54,5 @@ tree.setup {
   diagnostics = { enable = true },
   git = { enable = true, ignore = false, },
   update_focused_file = { enable = false, update_cwd = false, },
-  view = { hide_root_folder = true, mappings = { custom_only = true, list = mappings } },
+  view = { hide_root_folder = false, mappings = { custom_only = true, list = mappings } },
 }

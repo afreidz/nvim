@@ -1,7 +1,58 @@
 local present, bufferline = pcall(require, "bufferline")
 if not present then return end
 
+local theme_present, theme = pcall(require, "afcolors.api.colors");
+local colors = theme.get_colors()
+local highlights = {
+  indicator_selected = {
+    guifg = colors.sky,
+    guibg = colors.black2,
+  },
+  fill = {
+    guifg = colors.black4,
+    guibg = colors.black3,
+  },
+  background = {
+    guifg = colors.gray0,
+    guibg = colors.black3,
+  },
+  buffer_selected = {
+    guifg = colors.white,
+    guibg = colors.black2,
+    gui = "italic",
+  },
+  buffer_visible = {
+    guifg = colors.gray0,
+    guibg = colors.black2,
+  },
+  close_button = {
+    guifg = colors.black4,
+    guibg = colors.black3,
+  },
+  close_button_visible = {
+    guifg = colors.black4,
+    guibg = colors.black2,
+  },
+  close_button_selected = {
+    guifg = colors.gray0,
+    guibg = colors.black2,
+  },
+  separator = {
+    guifg = colors.black3,
+    guibg = colors.black3,
+  },
+  separator_visible = {
+    guifg = colors.black3,
+    guibg = colors.black3,
+  },
+  separator_selected = {
+    guifg = colors.black3,
+    guibg = colors.black3,
+  }
+}
+
 local setup = {
+  highlights = highlights,
   options = {
     tab_size = 21,
     numbers = "none", 
@@ -26,33 +77,8 @@ local setup = {
     left_mouse_command = "buffer %d",
     right_mouse_command = "Bdelete! %d",
     diagnostics_update_in_insert = false,
-    offsets = { { filetype = "NvimTree", text = "  neovim", padding = 1, text_align = "left" } },
+    offsets = { { filetype = "NvimTree", text = " ", padding = 1, text_align = "left" } },
   },
 }
 
-local theme_present, theme = pcall(require, 'catppuccin.api.colors')
-
-if not theme_present then
-  bufferline.setup(setup);
-  return
-end
-
-local colors = theme.get_colors()
-local overrides = require('afreidz.colors')
-
-local highlights = {
-  tab = { guibg = overrides.gray },
-  fill = { guibg = overrides.gray },
-  background = { guibg = overrides.gray },
-  close_button = { guibg = overrides.gray },
-  tab_selected = { guibg = overrides.black },
-  buffer_visible = { guibg = overrides.gray },
-  modified_visible = { guibg = overrides.gray },
-  duplicate_visible = { guibg = overrides.gray },
-  indicator_selected = { guifg = overrides.black },
-  close_button_visible = { guibg = overrides.gray },
-  separator = { guibg = overrides.gray, guifg = overrides.gray },
-}
-
-setup.highlights = highlights
 bufferline.setup(setup);

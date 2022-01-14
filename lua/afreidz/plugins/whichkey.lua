@@ -76,7 +76,7 @@ local leader_mappings = {
     name = "Find",
     b = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Buffers" },
     f = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Files" },
-    s = { "<cmd>Telescope sessions<cr>", "Sessions"},
+    s = { "<cmd>SessionManager load_session<cr>", "Sessions"},
     t = { "<cmd>Telescope live_grep<cr>", "Text" },
   },
   p = {

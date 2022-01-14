@@ -60,5 +60,12 @@ telescope.setup {
     },
   },
   pickers = {},
-  extensions = {},
+  extensions = {
+    ['ui-select'] = {
+      require('telescope.themes').get_dropdown {
+        previewer = false,
+      }
+    }
+  },
 }
+telescope.load_extension("ui-select");
