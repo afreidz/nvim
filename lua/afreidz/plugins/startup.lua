@@ -53,9 +53,9 @@ end
 local buttons = {
   type = "group",
   val = {
-    button("n", "  new file", "<cmd>ene <cr>"),
-    button("f", "  search files", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>"),
     button("s", "  search sessions", "<cmd>SessionManager load_session<cr>"),
+    button("f", "  search files", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>"),
+    button("n", "  new file", "<cmd>ene <cr>"),
   },
   opts = { spacing = 0 },
 }
