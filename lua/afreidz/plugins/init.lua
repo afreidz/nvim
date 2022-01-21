@@ -40,6 +40,7 @@ return packer.startup(function(use)
   use 'akinsho/toggleterm.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'folke/which-key.nvim'
+  use 'famiu/bufdelete.nvim'
 
   -- Color schemes
   use 'afreidz/colors.nvim'
