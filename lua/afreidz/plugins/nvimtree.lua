@@ -19,7 +19,6 @@ local icons = {
 }
 
 local g = vim.g
-g.nvim_tree_auto_open = 1
 g.nvim_tree_icons = icons
 g.nvim_tree_indent_markers = 1
 g.nvim_tree_disable_window_picker = 1
@@ -48,6 +47,7 @@ local mappings = {
 }
 
 tree.setup {
+  auto_open = true,
   update_cwd = true,
   auto_close = true,
   disable_netrw = true,
