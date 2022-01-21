@@ -5,8 +5,26 @@ local actions = require 'telescope.actions'
 
 telescope.setup {
   defaults = {
-    prompt_prefix = ' ',
-    selection_caret = ' ',
+    prompt_prefix = "   ",
+    selection_caret = "  ",
+    entry_prefix = "  ",
+    selection_strategy = "reset",
+    sorting_strategy = "ascending",
+    layout_strategy = "horizontal",
+    layout_config = {
+       horizontal = {
+          prompt_position = "top",
+          preview_width = 0.55,
+          results_width = 0.8,
+       },
+       vertical = {
+          mirror = false,
+       },
+       width = 0.87,
+       height = 0.80,
+       preview_cutoff = 120,
+    },
+    file_ignore_patterns = { "node_modules" },
     path_display = { 'smart' },
     mappings = {
       i = {
@@ -64,8 +82,10 @@ telescope.setup {
     ['ui-select'] = {
       require('telescope.themes').get_dropdown {
         previewer = false,
+        layout_strategy = 'horizontal',
       }
-    }
+    },
   },
 }
 telescope.load_extension("ui-select");
+telescope.load_extension("media_files");

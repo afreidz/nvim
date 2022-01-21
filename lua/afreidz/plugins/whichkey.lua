@@ -10,7 +10,7 @@ local setup = {
       suggestions = 20,
     },
     presets = {
-      operators = false, 
+      operators = true, 
       motions = true, 
       text_objects = true, 
       windows = true, 
@@ -63,19 +63,15 @@ local leader_opts = {
 local leader_mappings = {
   w = { "<cmd>w!<cr>", "Save Buffer" },
   q = { "<cmd>q<cr>", "Quit" },
-  c = { "<cmd>Bdelete!<cr>", "Close Buffer" },
+  c = { "<cmd>bd!<cr>", "Close Buffer" },
   h = { "<cmd>nohlsearch<cr>", "Clear Highlight" },
   s = { "<cmd>SessionManager save_current_session<cr>", "Save Session" },
   z = { "<cmd>ZenMode<cr>", "Zen Mode"},
-  e = {
-    name = "File Explorer",
-    e = { "<cmd>NvimTreeToggle<cr>", "Open"},
-    f = { "<cmd>NvimTreeFocus<cr>", "Focus" },
-  },
+  e = { "<cmd>NvimTreeFocus<cr>", "File Explorer" },
   f = {
     name = "Find",
-    b = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Buffers" },
-    f = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Files" },
+    b = { "<cmd>Telescope buffers<cr>", "Buffers" },
+    f = { "<cmd>Telescope find_files<cr>", "Files" },
     s = { "<cmd>SessionManager load_session<cr>", "Sessions"},
     t = { "<cmd>Telescope live_grep<cr>", "Text" },
   },
@@ -96,33 +92,18 @@ local leader_mappings = {
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-    d = {
-      "<cmd>Telescope diagnostics bufnr=0<cr>",
-      "Document Diagnostics",
-    },
-    w = {
-      "<cmd>Telescope diagnostics<cr>",
-      "Workspace Diagnostics",
-    },
+    d = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics" },
+    w = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
     f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
-    j = {
-      "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
-      "Next Diagnostic",
-    },
-    k = {
-      "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
-      "Prev Diagnostic",
-    },
+    j = { "<cmd>lua vim.lsp.diagnostic.goto_next()<cr>", "Next Diagnostic" },
+    k = { "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>", "Prev Diagnostic" },
     l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
     q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
     r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
     s = { "<cmd>SymbolsOutline<cr>", "Document Symbols" },
-    S = {
-      "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-      "Workspace Symbols",
-    },
+    S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols" },
   },
   S = {
     name = "Misc. Search",

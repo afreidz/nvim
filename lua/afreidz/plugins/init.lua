@@ -34,18 +34,15 @@ packer.init {
 
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim' 
-  use 'nvim-lua/plenary.nvim' 
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/popup.nvim'
   use 'windwp/nvim-autopairs' 
-  use 'moll/vim-bbye'
   use 'akinsho/toggleterm.nvim'
-  use 'lewis6991/impatient.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'folke/which-key.nvim'
 
   -- Color schemes
   use 'afreidz/colors.nvim'
-  use 'lunarvim/darkplus.nvim'
-  use { 'catppuccin/nvim', as = 'catppuccin' }
 
   -- Tab/Status/Tree
   use 'akinsho/bufferline.nvim'
@@ -73,6 +70,7 @@ return packer.startup(function(use)
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-ui-select.nvim'
+  use 'nvim-telescope/telescope-media-files.nvim'
 
   -- Treesitter
   use {
