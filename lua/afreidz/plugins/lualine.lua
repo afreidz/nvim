@@ -40,11 +40,11 @@ lualine.setup({
   },
   sections = {
     lualine_a = { mode },
-    lualine_b = {},
+    lualine_b = { location },
     lualine_c = {},
     lualine_x = {},
     lualine_y = { branch },
-    lualine_z = { filename, location },
+    lualine_z = { filename },
   },
   inactive_sections = {
     lualine_a = {},
