@@ -61,7 +61,7 @@ local leader_opts = {
 }
 
 local leader_mappings = {
-  w = { "<cmd>w!<cr>", "Save Buffer" },
+  w = { "<esc>:w!<bar>:lua vim.notify.success('Buffer saved!', vim.api.nvim_buf_get_name(0), 3000)<cr>", "Save Buffer" },
   q = { "<cmd>q<cr>", "Quit" },
   c = { "<cmd>Bdelete!<cr>", "Close Buffer" },
   h = { "<cmd>nohlsearch<cr>", "Clear Highlight" },

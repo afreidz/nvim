@@ -5,7 +5,6 @@ theme.setup({
   integrations = {
     cmp = true,
 		lsp = true,
-    notify = true,
 		markdown = true,
 		nvimtree = true,
 		which_key = true,
