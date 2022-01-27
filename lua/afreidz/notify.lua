@@ -1,4 +1,8 @@
-local Popup = require("nui.popup")
+
+
+local present, Popup = pcall(require, "nui.popup")
+if not present then return end
+
 local M = {}
 local default_width = 30
 local default_height = 2
