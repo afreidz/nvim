@@ -1,7 +1,4 @@
 ## AFreidz Neovim Setup
-<div align="center">
-  [![Lua](https://img.shields.io/badge/Made%20with%20Lua-blueviolet.svg?style=for-the-badge&logo=lua)](https://lua.org)
-</div>
 
 This is my neovim setup. The color-scheme is based on [catppuccin](https://github.com/catppuccin) with
 some darker backgrounds.  The setup is loosely based off of [NeoVim from Scratch](https://github.com/LunarVim/Neovim-from-scratch)
