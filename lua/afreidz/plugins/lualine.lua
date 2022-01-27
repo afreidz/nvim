@@ -29,10 +29,12 @@ local branch = {
   padding = 0,
 }
 
+local theme = require('afreidz.theme.lualine')
+
 lualine.setup({
   options = {
     icons_enabled = true,
-    theme = "afcolors",
+    theme = theme,
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
     disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },

@@ -11,9 +11,9 @@ local marks = {
   Search = { color = "orange" },
 }
 
-local theme_present, theme = pcall(require, "afcolors.api.colors")
+local theme_present, theme = pcall(require, "afreidz.theme.colors")
 if present then 
-  local colors = theme.get_colors()
+  local colors = theme
   handle.color = colors.black3
   marks.Hint.color = colors.sky
   marks.Info.color = colors.teal

@@ -1,8 +1,8 @@
 local present, bufferline = pcall(require, "bufferline")
 if not present then return end
 
-local theme_present, theme = pcall(require, "afcolors.api.colors");
-local colors = theme.get_colors()
+local _, theme = pcall(require, "afreidz.theme.colors");
+local colors = theme
 local highlights = {
   indicator_selected = {
     guifg = colors.sky,

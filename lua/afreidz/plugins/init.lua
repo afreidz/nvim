@@ -43,9 +43,6 @@ return packer.startup(function(use)
   use 'famiu/bufdelete.nvim'
   use 'MunifTanjim/nui.nvim'
 
-  -- Color schemes
-  use 'afreidz/colors.nvim'
-
   -- Tab/Status/Tree
   use 'akinsho/bufferline.nvim'
   use 'kyazdani42/nvim-tree.lua'
@@ -109,4 +106,5 @@ return packer.startup(function(use)
   if bootstrap then
     require('packer').sync()
   end
+
 end)

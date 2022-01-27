@@ -1,7 +1,7 @@
 require 'afreidz.options'
+require 'afreidz.theme'
 require 'afreidz.plugins'
 require 'afreidz.keymaps'
-require 'afreidz.plugins.theme'
 require 'afreidz.plugins.folds'
 require 'afreidz.plugins.lsp'
 require 'afreidz.plugins.cmp'

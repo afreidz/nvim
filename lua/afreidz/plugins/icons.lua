@@ -1,7 +1,7 @@
 local present, icons = pcall(require, 'nvim-web-devicons')
 if not present then return end
 
-local colors = require('afcolors.api.colors').get_colors()
+local colors = require('afreidz.theme.colors')
 local current = icons.get_icons()
 local new = {}
 
