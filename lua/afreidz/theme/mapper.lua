@@ -119,9 +119,10 @@ local function base()
 		GlyphPalette6 = { fg = cp.teal },
 		GlyphPalette7 = { fg = cp.white },
 		GlyphPalette9 = { fg = cp.red },
-    NotifyInfo = { fg = cp.sky, style = 'italic' },
-    NotifyError = { fg = cp.red, style = 'italic' },
-    NotifySuccess = { fg = cp.green, style = 'italic' },
+    NotifySUCCESSBorder = { fg = cp.black3, bg = cp.black3 },
+    NotifySUCCESSTitle = { fg = cp.green, bg = cp.black3, style = 'italic' },
+    NotifySUCCESSIcon = { fg = cp.green, bg = cp.black3, },
+    NotifySUCCESSBody = { fg = cp.white, bg = cp.black3 },
 	}
 end
 

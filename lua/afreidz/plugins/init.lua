@@ -42,6 +42,8 @@ return packer.startup(function(use)
   use 'folke/which-key.nvim'
   use 'famiu/bufdelete.nvim'
   use 'MunifTanjim/nui.nvim'
+  use 'lambdalisue/suda.vim'
+  use 'rcarriga/nvim-notify'
 
   -- Tab/Status/Tree
   use 'akinsho/bufferline.nvim'

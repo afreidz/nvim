@@ -3,26 +3,26 @@ if not present then return end
 
 local setup = {
   plugins = {
-    marks = true, 
-    registers = true, 
+    marks = true,
+    registers = true,
     spelling = {
       enabled = true,
       suggestions = 20,
     },
     presets = {
-      operators = true, 
-      motions = true, 
-      text_objects = true, 
-      windows = true, 
-      nav = true, 
-      z = true, 
-      g = true, 
+      operators = true,
+      motions = true,
+      text_objects = true,
+      windows = true,
+      nav = true,
+      z = true,
+      g = true,
     },
   },
   icons = {
-    breadcrumb = "»", 
-    separator = "➜", 
-    group = "+", 
+    breadcrumb = "»",
+    separator = "➜",
+    group = "+",
   },
   popup_mappings = {
     scroll_down = "<c-d>",
@@ -43,8 +43,8 @@ local setup = {
   },
   ignore_missing = true,
   hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " },
-  show_help = true, 
-  triggers = "auto", 
+  show_help = true,
+  triggers = "auto",
   triggers_blacklist = {
     i = { "j", "k" },
     v = { "j", "k" },
@@ -52,16 +52,16 @@ local setup = {
 }
 
 local leader_opts = {
-  mode = "n", 
+  mode = "n",
   prefix = "<leader>",
-  buffer = nil, 
-  silent = true, 
-  noremap = true, 
-  nowait = true, 
+  buffer = nil,
+  silent = true,
+  noremap = true,
+  nowait = true,
 }
 
 local leader_mappings = {
-  w = { "<esc>:w!<bar>:lua vim.notify.success('Buffer saved!', vim.fn.expand('%'), 10000)<cr>", "Save Buffer" },
+  w = { "<esc>:w!<bar>:lua vim.notify(vim.fn.expand('%'), 'success', { title = 'Buffer Saved', timeout = 3000 })<cr>", "Save Buffer" },
   q = { "<cmd>q<cr>", "Quit" },
   c = { "<cmd>Bdelete!<cr>", "Close Buffer" },
   h = { "<cmd>nohlsearch<cr>", "Clear Highlight" },
@@ -130,8 +130,8 @@ local motion_mappings = {
   ['<'] = {"<cmd><<cr>", "Unindent line" },
   ["<c-Right>"] = {"<C-w>l", "Move to next buffer" },
   ["<c-Left>"] = {"<C-w>h", "Move to previous buffer" },
-  ["<c-Up>"] = {"<Esc>:m .-2<CR>==gn", "Move line up" },
-  ["<c-Down>"] = {"<Esc>:m .+1<CR>==gn", "Move line down" },
+  ["<c-Up>"] = {":m .-2<cr>==", "Move line up" },
+  ["<c-Down>"] = {":m .+1<cr>==", "Move line down" },
   ['<a-tab>'] = {"<cmd>BufferLineCycleNext<cr>", "Move to the next tab" },
   ['<a-Left>'] = {"<cmd>vertical resize -2<cr>", "Resize vertical split" },
   ['<a-Right>'] = {"<cmd>vertical resize +2<cr>", "Resize vertical split" },
@@ -139,11 +139,11 @@ local motion_mappings = {
 }
 
 local motion_opts = {
-  mode = "n", 
-  buffer = nil, 
-  silent = true, 
-  noremap = true, 
-  nowait = true, 
+  mode = "n",
+  buffer = nil,
+  silent = true,
+  noremap = true,
+  nowait = true,
 }
 
 which_key.setup(setup)
