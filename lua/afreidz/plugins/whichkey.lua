@@ -62,7 +62,7 @@ local leader_opts = {
 
 local leader_mappings = {
   w = { "<esc>:w!<bar>:lua vim.notify(vim.fn.expand('%'), 'success', { title = 'Buffer Saved', timeout = 3000 })<cr>", "Save Buffer" },
-  q = { "<cmd>q<cr>", "Quit" },
+  q = { "<cmd>conf qa<cr>", "Quit" },
   c = { "<cmd>Bdelete!<cr>", "Close Buffer" },
   h = { "<cmd>nohlsearch<cr>", "Clear Highlight" },
   s = { "<cmd>SessionManager save_current_session<cr>", "Save Session" },
@@ -100,7 +100,7 @@ local leader_mappings = {
     j = { "<cmd>lua vim.lsp.diagnostic.goto_next()<cr>", "Next Diagnostic" },
     k = { "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>", "Prev Diagnostic" },
     l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
-    q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
+    Q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
     r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
     s = { "<cmd>SymbolsOutline<cr>", "Document Symbols" },
     S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols" },
