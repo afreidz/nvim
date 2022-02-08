@@ -1,11 +1,11 @@
 local config = {
 	term_colors = true,
 	styles = {
-    strings = "NONE",
+		strings = "NONE",
 		comments = "NONE",
 		keywords = "NONE",
-    variables = "NONE",
-    functions = "italic",
+		variables = "NONE",
+		functions = "italic",
 	},
 	integrations = {
 		cmp = true,

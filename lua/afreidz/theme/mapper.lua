@@ -1,9 +1,9 @@
-local colors = require('afreidz.theme.colors')
-local cnf = require('afreidz.theme.config')
+local colors = require("afreidz.theme.colors")
+local cnf = require("afreidz.theme.config")
 
 local function base()
 	local cp = colors
-	cp.none = 'NONE'
+	cp.none = "NONE"
 
 	return {
 		Comment = { fg = cp.gray0, style = cnf.styles.comments },
@@ -16,7 +16,7 @@ local function base()
 		CursorLine = { bg = cp.black2 },
 		Directory = { fg = cp.blue },
 		EndOfBuffer = { fg = cp.black2 },
-		ErrorMsg = { fg = cp.red, style = 'bold,italic' },
+		ErrorMsg = { fg = cp.red, style = "bold,italic" },
 		VertSplit = { fg = cp.black0 },
 		Folded = { bg = cp.black2, fg = cp.black4 },
 		FoldColumn = { bg = cp.black2, fg = cp.black3 },
@@ -25,8 +25,8 @@ local function base()
 		Substitute = { bg = cp.black4, fg = cp.pink },
 		LineNr = { fg = cp.black4, bg = cp.black2 },
 		CursorLineNr = { fg = cp.white },
-		MatchParen = { fg = cp.peach, style = 'bold' },
-		ModeMsg = { fg = cp.white, style = 'bold' },
+		MatchParen = { fg = cp.peach, style = "bold" },
+		ModeMsg = { fg = cp.white, style = "bold" },
 		MsgArea = { fg = cp.white },
 		MsgSeparator = {},
 		MoreMsg = { fg = cp.blue },
@@ -37,26 +37,26 @@ local function base()
 		NormalFloat = { fg = cp.white, bg = cp.black3 },
 		FloatBorder = { fg = cp.black3, bg = cp.black3 },
 		Pmenu = { bg = cp.black3, fg = cp.gray2 },
-		PmenuSel = { fg = cp.white, bg = cp.black4, style = 'bold' },
+		PmenuSel = { fg = cp.white, bg = cp.black4, style = "bold" },
 		PmenuSbar = { bg = cp.black4 },
 		PmenuThumb = { bg = cp.gray0 },
 		Question = { fg = cp.blue },
-		QuickFixLine = { bg = cp.black4, style = 'bold' },
-		Search = { bg = cp.black4, fg = cp.pink, style = 'bold' },
+		QuickFixLine = { bg = cp.black4, style = "bold" },
+		Search = { bg = cp.black4, fg = cp.pink, style = "bold" },
 		IncSearch = { bg = cp.pink, fg = cp.black4 },
 		SpecialKey = { fg = cp.white },
-		SpellBad = { sp = cp.red, style = 'undercurl' },
-		SpellCap = { sp = cp.yellow, style = 'undercurl' },
-		SpellLocal = { sp = cp.blue, style = 'undercurl' },
-		SpellRare = { sp = cp.green, style = 'undercurl' },
+		SpellBad = { sp = cp.red, style = "undercurl" },
+		SpellCap = { sp = cp.yellow, style = "undercurl" },
+		SpellLocal = { sp = cp.blue, style = "undercurl" },
+		SpellRare = { sp = cp.green, style = "undercurl" },
 		StatusLine = { fg = cp.white, bg = cp.black2 },
 		StatusLineNC = { fg = cp.black4, bg = cp.black2 },
 		TabLine = { bg = cp.black1, fg = cp.black4 },
 		TabLineFill = { bg = cp.black },
 		TabLineSel = { fg = cp.green, bg = cp.black4 },
-		Title = { fg = cp.blue, style = 'bold' },
-		Visual = { bg = cp.black4, style = 'bold' },
-		VisualNOS = { bg = cp.black4, style = 'bold' },
+		Title = { fg = cp.blue, style = "bold" },
+		Visual = { bg = cp.black4, style = "bold" },
+		VisualNOS = { bg = cp.black4, style = "bold" },
 		WarningMsg = { fg = cp.yellow },
 		Whitespace = { fg = cp.black4 },
 		WildMenu = { bg = cp.gray0 },
@@ -81,18 +81,18 @@ local function base()
 		Typedef = { fg = cp.yellow },
 		Special = { fg = cp.pink },
 		Type = { fg = cp.blue },
-		Underlined = { style = 'underline' },
-		Bold = { style = 'bold' },
-		Italic = { style = 'italic' },
+		Underlined = { style = "underline" },
+		Bold = { style = "bold" },
+		Italic = { style = "italic" },
 		Error = { fg = cp.red },
-		Todo = { bg = cp.yellow, fg = cp.black2, style = 'bold' },
+		Todo = { bg = cp.yellow, fg = cp.black2, style = "bold" },
 		qfLineNr = { fg = cp.yellow },
 		qfFileName = { fg = cp.blue },
-		htmlH1 = { fg = cp.pink, style = 'bold' },
-		htmlH2 = { fg = cp.blue, style = 'bold' },
+		htmlH1 = { fg = cp.pink, style = "bold" },
+		htmlH2 = { fg = cp.blue, style = "bold" },
 		mkdCodeDelimiter = { bg = cp.black2, fg = cp.white },
-		mkdCodeStart = { fg = cp.flamingo, style = 'bold' },
-		mkdCodeEnd = { fg = cp.flamingo, style = 'bold' },
+		mkdCodeStart = { fg = cp.flamingo, style = "bold" },
+		mkdCodeEnd = { fg = cp.flamingo, style = "bold" },
 		debugPC = { bg = cp.black0 },
 		debugBreakpoint = { bg = cp.black2, fg = cp.gray0 },
 		illuminatedWord = { bg = cp.black4 },
@@ -119,45 +119,45 @@ local function base()
 		GlyphPalette6 = { fg = cp.teal },
 		GlyphPalette7 = { fg = cp.white },
 		GlyphPalette9 = { fg = cp.red },
-    NotifySUCCESSBorder = { fg = cp.black3, bg = cp.black3 },
-    NotifySUCCESSTitle = { fg = cp.green, bg = cp.black3, style = 'italic' },
-    NotifySUCCESSIcon = { fg = cp.green, bg = cp.black3, },
-    NotifySUCCESSBody = { fg = cp.white, bg = cp.black3 },
-    NotifyERRORBorder = { fg = cp.black3, bg = cp.black3 },
-    NotifyERRORTitle = { fg = cp.red, bg = cp.black3, style = 'italic' },
-    NotifyERRORIcon = { fg = cp.red, bg = cp.black3, },
-    NotifyERRORBody = { fg = cp.white, bg = cp.black3 },
-    NotifyINFOBorder = { fg = cp.black3, bg = cp.black3 },
-    NotifyINFOTitle = { fg = cp.sky, bg = cp.black3, style = 'italic' },
-    NotifyINFOIcon = { fg = cp.sky, bg = cp.black3, },
-    NotifyINFOBody = { fg = cp.white, bg = cp.black3 },
-    NotifyWARNBorder = { fg = cp.black3, bg = cp.black3 },
-    NotifyWARNTitle = { fg = cp.yellow, bg = cp.black3, style = 'italic' },
-    NotifyWARNIcon = { fg = cp.yellow, bg = cp.black3, },
-    NotifyWARNBody = { fg = cp.white, bg = cp.black3 },
-    NotifyTRACEBorder = { fg = cp.black3, bg = cp.black3 },
-    NotifyTRACETitle = { fg = cp.rosewater, bg = cp.black3, style = 'italic' },
-    NotifyTRACEIcon = { fg = cp.rosewater, bg = cp.black3, },
-    NotifyTRACEBody = { fg = cp.white, bg = cp.black3 },
-    NotifyDEBUGBorder = { fg = cp.black3, bg = cp.black3 },
-    NotifyDEBUGTitle = { fg = cp.lavender, bg = cp.black3, style = 'italic' },
-    NotifyDEBUGIcon = { fg = cp.lavender, bg = cp.black3, },
-    NotifyDEBUGBody = { fg = cp.white, bg = cp.black3 },
+		NotifySUCCESSBorder = { fg = cp.black3, bg = cp.black3 },
+		NotifySUCCESSTitle = { fg = cp.green, bg = cp.black3, style = "italic" },
+		NotifySUCCESSIcon = { fg = cp.green, bg = cp.black3 },
+		NotifySUCCESSBody = { fg = cp.white, bg = cp.black3 },
+		NotifyERRORBorder = { fg = cp.black3, bg = cp.black3 },
+		NotifyERRORTitle = { fg = cp.red, bg = cp.black3, style = "italic" },
+		NotifyERRORIcon = { fg = cp.red, bg = cp.black3 },
+		NotifyERRORBody = { fg = cp.white, bg = cp.black3 },
+		NotifyINFOBorder = { fg = cp.black3, bg = cp.black3 },
+		NotifyINFOTitle = { fg = cp.sky, bg = cp.black3, style = "italic" },
+		NotifyINFOIcon = { fg = cp.sky, bg = cp.black3 },
+		NotifyINFOBody = { fg = cp.white, bg = cp.black3 },
+		NotifyWARNBorder = { fg = cp.black3, bg = cp.black3 },
+		NotifyWARNTitle = { fg = cp.yellow, bg = cp.black3, style = "italic" },
+		NotifyWARNIcon = { fg = cp.yellow, bg = cp.black3 },
+		NotifyWARNBody = { fg = cp.white, bg = cp.black3 },
+		NotifyTRACEBorder = { fg = cp.black3, bg = cp.black3 },
+		NotifyTRACETitle = { fg = cp.rosewater, bg = cp.black3, style = "italic" },
+		NotifyTRACEIcon = { fg = cp.rosewater, bg = cp.black3 },
+		NotifyTRACEBody = { fg = cp.white, bg = cp.black3 },
+		NotifyDEBUGBorder = { fg = cp.black3, bg = cp.black3 },
+		NotifyDEBUGTitle = { fg = cp.lavender, bg = cp.black3, style = "italic" },
+		NotifyDEBUGIcon = { fg = cp.lavender, bg = cp.black3 },
+		NotifyDEBUGBody = { fg = cp.white, bg = cp.black3 },
 	}
 end
 
 local function integrations()
-  local config = cnf['integrations']
+	local config = cnf["integrations"]
 	local mappings = {}
 
 	for integration in pairs(config) do
-    if config[integration] == true then
-      mappings = vim.tbl_deep_extend(
-        'force',
-        mappings,
-        require('afreidz.theme.integrations.'..integration).get(colors)
-      )
-    end
+		if config[integration] == true then
+			mappings = vim.tbl_deep_extend(
+				"force",
+				mappings,
+				require("afreidz.theme.integrations." .. integration).get(colors)
+			)
+		end
 	end
 
 	return mappings
@@ -168,7 +168,7 @@ local function terminal()
 end
 
 return {
-  base = base(),
-  terminal = terminal(),
-  integrations = integrations(),
+	base = base(),
+	terminal = terminal(),
+	integrations = integrations(),
 }

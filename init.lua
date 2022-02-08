@@ -1,24 +1,24 @@
-require 'afreidz.options'
-require 'afreidz.theme'
-require 'afreidz.plugins'
-require 'afreidz.keymaps'
-require 'afreidz.plugins.folds'
-require 'afreidz.plugins.lsp'
-require 'afreidz.plugins.cmp'
-require 'afreidz.plugins.git'
-require 'afreidz.plugins.indent'
-require 'afreidz.plugins.outline'
-require 'afreidz.plugins.nvimtree'
-require 'afreidz.plugins.whichkey'
-require 'afreidz.plugins.telescope'
-require 'afreidz.plugins.autopairs'
-require 'afreidz.plugins.treesitter'
-require 'afreidz.plugins.bufferline'
-require 'afreidz.plugins.session'
-require 'afreidz.plugins.icons'
-require 'afreidz.plugins.term'
-require 'afreidz.plugins.lualine'
-require 'afreidz.plugins.startup'
-require 'afreidz.plugins.scrollbar'
-require 'afreidz.plugins.notify'
-require 'afreidz.commands'
+require("afreidz.options")
+require("afreidz.theme")
+require("afreidz.plugins")
+require("afreidz.keymaps")
+require("afreidz.plugins.folds")
+require("afreidz.plugins.lsp")
+require("afreidz.plugins.cmp")
+require("afreidz.plugins.git")
+require("afreidz.plugins.indent")
+require("afreidz.plugins.outline")
+require("afreidz.plugins.nvimtree")
+require("afreidz.plugins.whichkey")
+require("afreidz.plugins.telescope")
+require("afreidz.plugins.autopairs")
+require("afreidz.plugins.treesitter")
+require("afreidz.plugins.bufferline")
+require("afreidz.plugins.session")
+require("afreidz.plugins.icons")
+require("afreidz.plugins.term")
+require("afreidz.plugins.lualine")
+require("afreidz.plugins.startup")
+require("afreidz.plugins.scrollbar")
+require("afreidz.plugins.notify")
+require("afreidz.commands")

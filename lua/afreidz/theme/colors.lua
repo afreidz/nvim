@@ -13,16 +13,14 @@ local color_palette = {
 	teal = "#B5E8E0", -- Teal
 	lavender = "#C9CBFF", -- Lavender
 	white = "#c5c8c9",
-  black0 = "#0d1416",
-  black1 = "#111719",
-  black2 = "#131a1c",
-  black3 = "#192022",
-  black4 = "#202729",
-  gray0 = "#363D3E",
-  gray1 = "#4A5051",
-  gray2 = "#5C6262",
+	black0 = "#0d1416",
+	black1 = "#111719",
+	black2 = "#131a1c",
+	black3 = "#192022",
+	black4 = "#202729",
+	gray0 = "#363D3E",
+	gray1 = "#4A5051",
+	gray2 = "#5C6262",
 }
-
-
 
 return color_palette

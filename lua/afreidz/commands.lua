@@ -1,2 +1,2 @@
 local cmd = vim.cmd
-cmd('au SessionLoadPost * NvimTreeOpen')
+cmd("au SessionLoadPost * NvimTreeOpen")

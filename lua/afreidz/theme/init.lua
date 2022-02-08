@@ -1,32 +1,31 @@
 local g = vim.g
-local cnf = require('afreidz.theme.config');
-local mappings = require('afreidz.theme.mapper')
+local cnf = require("afreidz.theme.config")
+local mappings = require("afreidz.theme.mapper")
 
-vim.cmd('hi clear')
+vim.cmd("hi clear")
 
 if vim.fn.exists("syntax_on") then
-  vim.cmd('syntax reset')
+	vim.cmd("syntax reset")
 end
 
-
 local highlight = function(tbl)
-  for group,color in pairs(tbl) do
-    local style = color.style and "gui=" .. color.style or "gui=NONE"
-    local fg = color.fg and "guifg=" .. color.fg or "guifg=NONE"
-    local bg = color.bg and "guibg=" .. color.bg or "guibg=NONE"
-    local sp = color.sp and "guisp=" .. color.sp or ""
-    local blend = color.blend and "blend=" .. color.blend or ""
-    local hl = "highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp .. " " .. blend
+	for group, color in pairs(tbl) do
+		local style = color.style and "gui=" .. color.style or "gui=NONE"
+		local fg = color.fg and "guifg=" .. color.fg or "guifg=NONE"
+		local bg = color.bg and "guibg=" .. color.bg or "guibg=NONE"
+		local sp = color.sp and "guisp=" .. color.sp or ""
+		local blend = color.blend and "blend=" .. color.blend or ""
+		local hl = "highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp .. " " .. blend
 
-    vim.cmd(hl)
-    if color.link then
-      vim.cmd("highlight! link " .. group .. " " .. color.link)
-    end
-  end
+		vim.cmd(hl)
+		if color.link then
+			vim.cmd("highlight! link " .. group .. " " .. color.link)
+		end
+	end
 end
 
 local terminal = function(cp)
-  g.terminal_color_0 = cp.gray0
+	g.terminal_color_0 = cp.gray0
 	g.terminal_color_8 = cp.gray1
 	g.terminal_color_1 = cp.red
 	g.terminal_color_9 = cp.red
@@ -47,4 +46,6 @@ end
 g.colors_name = "afreidz"
 highlight(mappings.base)
 highlight(mappings.integrations)
-if cnf['term_colors'] then terminal(mappings.terminal) end
+if cnf["term_colors"] then
+	terminal(mappings.terminal)
+end
