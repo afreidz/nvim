@@ -1,9 +1,7 @@
 local _null, null_ls = pcall(require, "null-ls")
 local _lsp, lspconfig = pcall(require, "lspconfig")
 
-local _kind, kind = pcall(require, "lspkind")
 local _aerial, aerial = pcall(require, "aerial")
-local _sig, sig = pcall(require, "lsp_signature")
 local _bulb, bulb = pcall(require, "nvim-lightbulb")
 
 if not _lsp or not _null then
@@ -68,7 +66,7 @@ local on_attach = function(client, bufnr)
 	end
 
 	if _bulb then
-		vim.cmd([[ autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb({ float = { enabled = true } }) ]])
+		vim.cmd([[ autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb() ]])
 	end
 
 	if _aerial then
@@ -90,15 +88,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.prettier.with({
 			extra_filetypes = { "svelte" },
 		}),
-		null_ls.builtins.diagnostics.eslint_d,
 		null_ls.builtins.code_actions.eslint_d,
 	},
 	on_attach = on_attach,
 })
-
-if _kind then
-	kind.init()
-end
-if _sig then
-	sig.setup()
-end

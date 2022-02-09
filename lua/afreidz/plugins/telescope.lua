@@ -93,6 +93,6 @@ telescope.setup({
 	},
 })
 telescope.load_extension("fzf")
-telescope.load_extension("neoclip")
 telescope.load_extension("ui-select")
 telescope.load_extension("media_files")
+if _clip then telescope.load_extension("neoclip") end

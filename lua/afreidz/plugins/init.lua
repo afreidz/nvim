@@ -54,10 +54,11 @@ return packer.startup(function(use)
 
 	-- Completion
 	use("hrsh7th/nvim-cmp")
-	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
+  use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-cmdline")
 	use("hrsh7th/cmp-nvim-lsp")
+  use("hrsh7th/cmp-nvim-lsp-signature-help")
 
 	-- Snippets
 	use("L3MON4D3/LuaSnip")
@@ -68,7 +69,6 @@ return packer.startup(function(use)
 	use("onsails/lspkind-nvim")
 	use("neovim/nvim-lspconfig")
 	use("kosayoda/nvim-lightbulb")
-	use("ray-x/lsp_signature.nvim")
 	use("williamboman/nvim-lsp-installer")
 	use("jose-elias-alvarez/null-ls.nvim")
 
