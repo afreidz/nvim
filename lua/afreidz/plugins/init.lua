@@ -35,17 +35,16 @@ packer.init({
 })
 
 return packer.startup(function(use)
-	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
-	use("nvim-lua/popup.nvim")
-	use("windwp/nvim-autopairs")
-	use("akinsho/toggleterm.nvim")
-	use("lukas-reineke/indent-blankline.nvim")
+
 	use("folke/which-key.nvim")
 	use("famiu/bufdelete.nvim")
-	use("MunifTanjim/nui.nvim")
 	use("lambdalisue/suda.vim")
 	use("rcarriga/nvim-notify")
+	use("windwp/nvim-autopairs")
+	use("wbthomason/packer.nvim")
+	use("akinsho/toggleterm.nvim")
+	use("lukas-reineke/indent-blankline.nvim")
 
 	-- Tab/Status/Tree
 	use("akinsho/bufferline.nvim")
@@ -65,7 +64,11 @@ return packer.startup(function(use)
 	use("rafamadriz/friendly-snippets")
 
 	-- LSP
+	use("stevearc/aerial.nvim")
+	use("onsails/lspkind-nvim")
 	use("neovim/nvim-lspconfig")
+	use("kosayoda/nvim-lightbulb")
+	use("ray-x/lsp_signature.nvim")
 	use("williamboman/nvim-lsp-installer")
 	use("jose-elias-alvarez/null-ls.nvim")
 
@@ -74,6 +77,7 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope-ui-select.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+	use({ "AckslD/nvim-neoclip.lua", requires = { "nvim-telescope/telescope.nvim" } })
 
 	-- Treesitter
 	use({
@@ -83,6 +87,14 @@ return packer.startup(function(use)
 
 	-- Git
 	use("airblade/vim-gitgutter")
+
+	-- Comments
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	})
 
 	-- Zen
 	use({

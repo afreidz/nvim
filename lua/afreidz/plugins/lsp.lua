@@ -1,8 +1,22 @@
-local _lsp, lspconfig = pcall(require, "lspconfig")
 local _null, null_ls = pcall(require, "null-ls")
+local _lsp, lspconfig = pcall(require, "lspconfig")
+
+local _kind, kind = pcall(require, "lspkind")
+local _aerial, aerial = pcall(require, "aerial")
+local _sig, sig = pcall(require, "lsp_signature")
+local _bulb, bulb = pcall(require, "nvim-lightbulb")
 
 if not _lsp or not _null then
 	return
+end
+
+if _aerial then
+	aerial.setup({
+		min_width = 30,
+		show_guides = true,
+		default_direction = "right",
+		backends = { "lsp", "treesitter" },
+	})
 end
 
 local signs = {
@@ -52,6 +66,14 @@ local on_attach = function(client, bufnr)
       autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, { focus = false, scope = "cursor", header = "Diagnostics:" })
     ]])
 	end
+
+	if _bulb then
+		vim.cmd([[ autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb({ float = { enabled = true } }) ]])
+	end
+
+	if _aerial then
+		aerial.on_attach(client, bufnr)
+	end
 end
 
 lspconfig.tsserver.setup({
@@ -73,3 +95,10 @@ null_ls.setup({
 	},
 	on_attach = on_attach,
 })
+
+if _kind then
+	kind.init()
+end
+if _sig then
+	sig.setup()
+end
