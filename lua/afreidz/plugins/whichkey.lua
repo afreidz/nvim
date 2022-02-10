@@ -63,6 +63,7 @@ local leader_opts = {
 }
 
 local leader_mappings = {
+  [','] = { ":call emmet#expandAbbr(3, '')<cr>", "Emmet Expand" },
 	w = {
 		"<esc>:w!<bar>:lua vim.notify(vim.fn.expand('%'), 'success', { title = 'Buffer Saved' })<cr>",
 		"Save Buffer",

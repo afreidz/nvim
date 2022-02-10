@@ -37,6 +37,7 @@ packer.init({
 return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 
+  use("mattn/emmet-vim")
 	use("folke/which-key.nvim")
 	use("famiu/bufdelete.nvim")
 	use("lambdalisue/suda.vim")
