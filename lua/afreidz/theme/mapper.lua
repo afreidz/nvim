@@ -17,7 +17,7 @@ local function base()
 		Directory = { fg = cp.blue },
 		EndOfBuffer = { fg = cp.black2 },
 		ErrorMsg = { fg = cp.red, style = "bold,italic" },
-		VertSplit = { fg = cp.black3 },
+		VertSplit = { bg = cp.black3, fg = cp.black3 },
 		Folded = { bg = cp.black2, fg = cp.black4 },
 		FoldColumn = { bg = cp.black2, fg = cp.black3 },
 		SignColumn = { bg = cp.black2, fg = cp.black4 },

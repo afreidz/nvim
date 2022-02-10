@@ -16,7 +16,7 @@ local marks = {
 local theme_present, theme = pcall(require, "afreidz.theme.colors")
 if present then
 	local colors = theme
-	handle.color = colors.black3
+	handle.color = colors.black4
 	marks.Hint.color = colors.sky
 	marks.Info.color = colors.teal
 	marks.Error.color = colors.red
