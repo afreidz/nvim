@@ -1,5 +1,5 @@
-local present, term = pcall(require, "toggleterm")
-if not present then
+local _term, term = pcall(require, "toggleterm")
+if not _term then
 	return
 end
 

@@ -1,5 +1,6 @@
-local present, npairs = pcall(require, "nvim-autopairs")
-if not present then
+local _npairs, npairs = pcall(require, "nvim-autopairs")
+local _autotag, autotag = pcall(require, "nvim-ts-autotag")
+if not _npairs then
 	return
 end
 
@@ -24,8 +25,12 @@ npairs.setup({
 })
 
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-local cmp_present, cmp = pcall(require, "cmp")
-if not cmp_present then
-	return
+local _cmp, cmp = pcall(require, "cmp")
+
+if _cmp then
+  cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done({ map_char = { tex = "" } }))
 end
-cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done({ map_char = { tex = "" } }))
+
+if _autotag then
+  autotag.setup()
+end

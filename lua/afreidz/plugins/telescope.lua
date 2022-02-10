@@ -1,6 +1,6 @@
-local present, telescope = pcall(require, "telescope")
+local _telescope, telescope = pcall(require, "telescope")
 local _clip, clip = pcall(require, "neoclip")
-if not present then
+if not _telescope then
 	return
 end
 

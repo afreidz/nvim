@@ -25,8 +25,8 @@ g.nvim_tree_disable_window_picker = 1
 g.nvim_tree_highlight_opened_files = 2
 g.nvim_tree_show_icons = { git = 1, folder_arrows = 1, folders = 1, files = 1 }
 
-local present, tree = pcall(require, "nvim-tree")
-if not present then
+local _tree, tree = pcall(require, "nvim-tree")
+if not _tree then
 	return
 end
 

@@ -1,9 +1,9 @@
-local present, bufferline = pcall(require, "bufferline")
-if not present then
+local _bufferline, bufferline = pcall(require, "bufferline")
+if not _bufferline then
 	return
 end
 
-local _, theme = pcall(require, "afreidz.theme.colors")
+local theme = require("afreidz.theme.colors")
 local colors = theme
 local highlights = {
 	indicator_selected = {

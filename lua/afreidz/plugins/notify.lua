@@ -1,5 +1,5 @@
-local present, notify = pcall(require, "notify")
-if not present then
+local _notify, notify = pcall(require, "notify")
+if not _notify then
 	return
 end
 

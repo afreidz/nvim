@@ -1,5 +1,5 @@
-local present, indent = pcall(require, "indent_blankline")
-if not present then
+local _indent, indent = pcall(require, "indent_blankline")
+if not _indent then
 	return
 end
 

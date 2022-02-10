@@ -1,5 +1,5 @@
-local present, ssm = pcall(require, "session_manager")
-if not present then
+local _ssm, ssm = pcall(require, "session_manager")
+if not _ssm then
 	return
 end
 

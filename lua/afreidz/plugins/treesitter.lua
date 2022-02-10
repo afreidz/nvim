@@ -1,11 +1,12 @@
-local present, configs = pcall(require, "nvim-treesitter.configs")
-if not present then
+local _configs, configs = pcall(require, "nvim-treesitter.configs")
+if not _configs then
 	return
 end
 
 configs.setup({
 	ensure_installed = "maintained",
 	sync_install = false,
+  autotag = { enable = true },
 	autopairs = { enable = true },
 	highlight = {
 		enable = true,

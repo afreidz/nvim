@@ -1,5 +1,5 @@
-local present, scrollbar = pcall(require, "scrollbar")
-if not present then
+local _scrollbar, scrollbar = pcall(require, "scrollbar")
+if not _scrollbar then
 	return
 end
 
@@ -13,17 +13,15 @@ local marks = {
 	Search = { color = "orange" },
 }
 
-local theme_present, theme = pcall(require, "afreidz.theme.colors")
-if present then
-	local colors = theme
-	handle.color = colors.black4
-	marks.Hint.color = colors.sky
-	marks.Info.color = colors.teal
-	marks.Error.color = colors.red
-	marks.Warn.color = colors.yellow
-	marks.Search.color = colors.mauve
-	marks.Misc.color = colors.flamingo
-end
+local theme = require("afreidz.theme.colors")
+local colors = theme
+handle.color = colors.black4
+marks.Hint.color = colors.sky
+marks.Info.color = colors.teal
+marks.Error.color = colors.red
+marks.Warn.color = colors.yellow
+marks.Search.color = colors.mauve
+marks.Misc.color = colors.flamingo
 
 scrollbar.setup({
 	marks = marks,
