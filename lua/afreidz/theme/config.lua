@@ -3,7 +3,7 @@ local config = {
 	styles = {
 		strings = "NONE",
 		comments = "NONE",
-		keywords = "NONE",
+		keywords = "italic",
 		variables = "NONE",
 		functions = "italic",
 	},

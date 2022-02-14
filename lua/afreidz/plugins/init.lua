@@ -125,6 +125,9 @@ return packer.startup(function(use)
 	-- Scrollbar
 	use("petertriho/nvim-scrollbar")
 
+  -- Langs
+  use("jxnblk/vim-mdx-js")
+
 	if bootstrap then
 		require("packer").sync()
 	end
