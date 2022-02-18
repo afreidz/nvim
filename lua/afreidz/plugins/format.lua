@@ -12,38 +12,23 @@ local prettier_common = function()
   }
 end
 
+local luafmt = function()
+  return {
+    stdin = true,
+    exe = "luafmt",
+    args = {"--indent-count", 2, "--stdin"}
+  }
+end
+
 format.setup(
   {
     filetype = {
-<<<<<<< HEAD
-=======
+      lua = {luafmt},
       json = {prettier_common},
->>>>>>> 18a2baf (ditch null_ls in favor of formatter.nvim)
       javascript = {prettier_common},
       typescript = {prettier_common},
       javascriptreact = {prettier_common},
       typescriptreact = {prettier_common},
-      lua = {
-        function()
-          return {
-            stdin = true,
-            exe = "luafmt",
-            args = {"--indent-count", 2, "--stdin"}
-          }
-        end
-      },
-<<<<<<< HEAD
-      json = {
-        function()
-          return {
-            exe = "prettier",
-            args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), "--double-quote"},
-            stdin = true
-          }
-        end
-      }
-=======
->>>>>>> 18a2baf (ditch null_ls in favor of formatter.nvim)
     }
   }
 )
