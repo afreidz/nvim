@@ -1,10 +1,9 @@
-local _null, null_ls = pcall(require, "null-ls")
 local _lsp, lspconfig = pcall(require, "lspconfig")
 
 local _aerial, aerial = pcall(require, "aerial")
 local _bulb, bulb = pcall(require, "nvim-lightbulb")
 
-if not _lsp or not _null then
+if not _lsp then
 	return
 end
 
@@ -82,13 +81,3 @@ lspconfig.tsserver.setup({
 	end,
 })
 
-null_ls.setup({
-	sources = {
-		null_ls.builtins.formatting.stylua,
-		null_ls.builtins.formatting.prettier.with({
-			extra_filetypes = { "svelte" },
-		}),
-		null_ls.builtins.code_actions.eslint_d,
-	},
-	on_attach = on_attach,
-})

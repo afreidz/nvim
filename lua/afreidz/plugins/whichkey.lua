@@ -110,9 +110,9 @@ local leader_mappings = {
 	l = {
 		name = "LSP",
 		I = { "<cmd>LspInfo<cr>", "Info" },
+    f = { "<cmd>Format<cr>", "Format" },
 		i = { "<cmd>LspInstall<cr>", "Install" },
 		s = { "<cmd>AerialToggle<cr>", "Symbols" },
-		f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" }, 
 		w = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
 		d = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics" },

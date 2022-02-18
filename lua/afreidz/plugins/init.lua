@@ -71,8 +71,8 @@ return packer.startup(function(use)
 	use("onsails/lspkind-nvim")
 	use("neovim/nvim-lspconfig")
 	use("kosayoda/nvim-lightbulb")
+  use("mhartington/formatter.nvim")
 	use("williamboman/nvim-lsp-installer")
-	use("jose-elias-alvarez/null-ls.nvim")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
@@ -86,6 +86,11 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
+
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && yarn install",
+  })
 
 	-- Git
 	use("airblade/vim-gitgutter")
