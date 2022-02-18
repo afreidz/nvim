@@ -78,6 +78,7 @@ return packer.startup(
     use("stevearc/aerial.nvim")
     use("onsails/lspkind-nvim")
     use("neovim/nvim-lspconfig")
+    use("sgur/vim-editorconfig")
     use("kosayoda/nvim-lightbulb")
     use("mhartington/formatter.nvim")
     use("williamboman/nvim-lsp-installer")
