@@ -15,6 +15,10 @@ end
 format.setup(
   {
     filetype = {
+<<<<<<< HEAD
+=======
+      json = {prettier_common},
+>>>>>>> 18a2baf (ditch null_ls in favor of formatter.nvim)
       javascript = {prettier_common},
       typescript = {prettier_common},
       javascriptreact = {prettier_common},
@@ -28,6 +32,7 @@ format.setup(
           }
         end
       },
+<<<<<<< HEAD
       json = {
         function()
           return {
@@ -37,6 +42,8 @@ format.setup(
           }
         end
       }
+=======
+>>>>>>> 18a2baf (ditch null_ls in favor of formatter.nvim)
     }
   }
 )
