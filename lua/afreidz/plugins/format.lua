@@ -24,11 +24,15 @@ format.setup(
   {
     filetype = {
       lua = {luafmt},
+      yaml = {prettier_common},
       json = {prettier_common},
+      html = {prettier_common},
+      markdown = {prettier_common},
       javascript = {prettier_common},
       typescript = {prettier_common},
       javascriptreact = {prettier_common},
       typescriptreact = {prettier_common},
+      ["markdown.mdx"] = {prettier_common}
     }
   }
 )
