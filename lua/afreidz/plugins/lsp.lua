@@ -77,6 +77,10 @@ local on_attach = function(client, bufnr)
   end
 end
 
+lspconfig.svelte.setup({
+  filetypes = { "svelte" }
+}) 
+
 lspconfig.tsserver.setup(
   {
     on_attach = function(client, bufnr)
