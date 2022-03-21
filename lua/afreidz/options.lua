@@ -9,6 +9,7 @@ local options = {
 	pumheight = 10,
 	shiftwidth = 2,
 	confirm = true,
+  laststatus = 3,
 	undofile = true,
 	numberwidth = 4,
 	hlsearch = true,

@@ -45,12 +45,13 @@ local theme = require("afreidz.theme.lualine")
 
 lualine.setup({
 	options = {
+    theme = theme,
+    globalstatus = true,
 		icons_enabled = true,
-		theme = theme,
-		component_separators = { left = "", right = "" },
+    always_divide_middle = true,
 		section_separators = { left = "", right = "" },
+    component_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
-		always_divide_middle = true,
 	},
 	sections = {
 		lualine_a = { mode },

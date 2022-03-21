@@ -59,6 +59,7 @@ local function base()
 		VisualNOS = { bg = cp.black4, style = "bold" },
 		WarningMsg = { fg = cp.yellow },
 		Whitespace = { fg = cp.black4 },
+    Winseparator = { bg = cp.black1, fg = cp.black1 },
 		WildMenu = { bg = cp.gray0 },
 		Constant = { fg = cp.peach },
 		String = { fg = cp.green, style = cnf.styles.strings },

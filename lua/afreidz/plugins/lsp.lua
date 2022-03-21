@@ -1,4 +1,6 @@
 local _lsp, lspconfig = pcall(require, "lspconfig")
+local _lsp_util, lsp_util = pcall(require, "lspconfig/util")
+local _locallsp, locallsp = pcall(require, "lspconfig/configs")
 
 local _aerial, aerial = pcall(require, "aerial")
 local _bulb, bulb = pcall(require, "nvim-lightbulb")
@@ -77,9 +79,41 @@ local on_attach = function(client, bufnr)
   end
 end
 
-lspconfig.svelte.setup({
-  filetypes = { "svelte" }
-}) 
+locallsp.prosemd = {
+  default_config = {
+    settings = {},
+    filetypes = {"markdown", "markdown.mdx", "mdx"},
+    cmd = {"/usr/local/bin/prosemd-lsp", "--stdio"},
+    root_dir = function(fname)
+      return lsp_util.find_git_ancestor(fname) or vim.fn.getcwd()
+    end
+  }
+}
+
+lspconfig.cssls.setup(
+  {
+    filetypes = {"scss"}
+  }
+)
+
+lspconfig.svelte.setup(
+  {
+    filetypes = {"svelte"}
+  }
+)
+
+lspconfig.html.setup(
+  {
+    filetypes = {"markdown.mdx"}
+  }
+)
+
+lspconfig.prosemd.setup(
+  {
+    filetypes = {"markdown.mdx"},
+    on_attach = on_attach
+  }
+)
 
 lspconfig.tsserver.setup(
   {
