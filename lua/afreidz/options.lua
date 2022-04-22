@@ -1,7 +1,7 @@
 local options = {
 	mouse = "a",
 	tabstop = 2,
-	wrap = false,
+	wrap = true,
 	fcs = "eob: ",
 	cmdheight = 1,
 	number = true,
@@ -14,6 +14,7 @@ local options = {
 	numberwidth = 4,
 	hlsearch = true,
 	swapfile = true,
+  linebreak = true,
 	conceallevel = 0,
 	showmode = false,
 	timeoutlen = 100,

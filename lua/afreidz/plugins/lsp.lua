@@ -79,17 +79,6 @@ local on_attach = function(client, bufnr)
   end
 end
 
-locallsp.prosemd = {
-  default_config = {
-    settings = {},
-    filetypes = {"markdown", "markdown.mdx", "mdx"},
-    cmd = {"/usr/local/bin/prosemd-lsp", "--stdio"},
-    root_dir = function(fname)
-      return lsp_util.find_git_ancestor(fname) or vim.fn.getcwd()
-    end
-  }
-}
-
 lspconfig.cssls.setup(
   {
     filetypes = {"scss"}
@@ -98,25 +87,19 @@ lspconfig.cssls.setup(
 
 lspconfig.svelte.setup(
   {
-    filetypes = {"svelte"}
+    filetypes = {"svelte", "svx", "astro"}
   }
 )
 
 lspconfig.html.setup(
   {
-    filetypes = {"markdown.mdx"}
-  }
-)
-
-lspconfig.prosemd.setup(
-  {
-    filetypes = {"markdown.mdx"},
-    on_attach = on_attach
+    filetypes = {"mdx", "svelte", "astro", "svx"}
   }
 )
 
 lspconfig.tsserver.setup(
   {
+    filetypes = {"typescript", "typescriptreact", "typescript.tsx", "mdx", "svx", "svelte" },
     on_attach = function(client, bufnr)
       client.resolved_capabilities.document_formatting = false
       client.resolved_capabilities.document_range_formatting = false

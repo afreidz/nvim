@@ -46,6 +46,7 @@ return packer.startup(
     use("nvim-lua/plenary.nvim")
 
     use("mattn/emmet-vim")
+    use("ap/vim-css-color")
     use("folke/which-key.nvim")
     use("famiu/bufdelete.nvim")
     use("lambdalisue/suda.vim")

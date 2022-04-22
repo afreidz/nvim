@@ -24,15 +24,20 @@ format.setup(
   {
     filetype = {
       lua = {luafmt},
+      css = {prettier_common},
+      svx = {prettier_common},
+      mdx = {prettier_common},
+      scss = {prettier_common},
       yaml = {prettier_common},
       json = {prettier_common},
       html = {prettier_common},
+      astro = {prettier_common},
+      svelte = {prettier_common},
       markdown = {prettier_common},
       javascript = {prettier_common},
       typescript = {prettier_common},
       javascriptreact = {prettier_common},
-      typescriptreact = {prettier_common},
-      ["markdown.mdx"] = {prettier_common}
+      typescriptreact = {prettier_common}
     }
   }
 )
