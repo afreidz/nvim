@@ -65,11 +65,11 @@ local leader_opts = {
 local leader_mappings = {
   [','] = { ":call emmet#expandAbbr(3, '')<cr>", "Emmet Expand" },
 	w = {
-		"<esc>:w!<bar>:lua vim.notify(vim.fn.expand('%'), 'success', { title = 'Buffer Saved' })<cr>",
+		"<esc>:w!<cr>",
 		"Save Buffer",
 	},
 	W = {
-		"<esc>:SudaWrite<bar>:lua vim.notify(vim.fn.expand('%'), 'success', { title = 'Buffer saved with sudo' })<cr>",
+		"<esc>:SudaWrite<cr>",
 		"Sudo Save Buffer",
 	},
 	x = { "<cmd>:q<cr>", "Quit Buffer" },
