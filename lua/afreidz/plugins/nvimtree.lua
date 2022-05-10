@@ -47,13 +47,13 @@ local mappings = {
 }
 
 tree.setup({
-	auto_open = true,
 	update_cwd = true,
 	disable_netrw = true,
 	hijack_cursor = true,
-  indent_markers = true,
 	diagnostics = { enable = true },
 	git = { enable = true, ignore = false },
+  renderer = { indent_markers = { enable = true } },
+  hijack_directories = { enable = true, auto_open = true },
 	update_focused_file = { enable = false, update_cwd = false },
   actions = { open_file = { window_picker = { enable = false } } },
 	view = { hide_root_folder = false, mappings = { custom_only = true, list = mappings } },

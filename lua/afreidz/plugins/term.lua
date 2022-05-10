@@ -5,11 +5,12 @@ end
 
 term.setup({
 	shade_terminals = false,
+  highlights = {
+    border = "FloatBorder",
+    background = "NormalFloat",
+  },
 	float_opts = {
+    border = "solid",
 		winblend = 0,
-		highlights = {
-			border = "FloatBorder",
-			background = "NormalFloat",
-		},
 	},
 })
