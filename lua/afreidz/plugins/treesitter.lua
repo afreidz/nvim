@@ -7,13 +7,12 @@ end
 configs.setup(
   {
     ensure_installed = "all",
+    ignore_install = {"phpdoc"},
     sync_install = false,
     autotag = {enable = true},
     autopairs = {enable = true},
     highlight = {
       enable = true,
-      disable = {""},
-      additional_vim_regex_highlighting = true
     },
     indent = {enable = true, disable = {"yaml"}},
     context_commentstring = {

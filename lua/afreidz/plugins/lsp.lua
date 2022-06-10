@@ -63,12 +63,12 @@ local on_attach = function(client, bufnr)
     ]],
       false
     )
+  end
     vim.cmd(
       [[
       autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, { focus = false, scope = "cursor", header = "Diagnostics:" })
     ]]
     )
-  end
 
   if _bulb then
     vim.cmd([[ autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb() ]])

@@ -132,10 +132,10 @@ local motion_mappings = {
 	["<c-Right>"] = { "<C-w>l", "Move to next buffer" },
 	["<c-Down>"] = { ":m .+1<cr>==", "Move line down" },
 	["<c-Left>"] = { "<C-w>h", "Move to previous buffer" },
-	["<a-tab>"] = { "<cmd>BufferLineCycleNext<cr>", "Move to the next tab" },
+  ["<a-tab>"] = { "<cmd>bNext<cr>", "Move to the next buffer"},
+  ["<a-s-tab>"] = { "<cmd>bPrev<cr>", "Move to the previous buffer" },
 	["<a-Left>"] = { "<cmd>vertical resize -2<cr>", "Resize vertical split" },
 	["<a-Right>"] = { "<cmd>vertical resize +2<cr>", "Resize vertical split" },
-	["<a-s-tab>"] = { "<cmd>BufferLineCyclePrev<cr>", "Move to the previous tab" },
 }
 
 local motion_opts = {
